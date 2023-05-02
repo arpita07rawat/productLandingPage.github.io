@@ -1,0 +1,200 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* <------HEADER-----> */
+.navbar{
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+.navbar.scrolled {
+    background-color: #303030;
+}
+.navbar{
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    z-index: 100;
+}
+.nav-link{
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+.nav-link:hover{
+    opacity: 0.8;
+    border-bottom: 3px solid #ff8c94;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 300ms;
+}
+.active {
+    opacity: 0.7;
+    border-bottom: 3px solid #ff8c94;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 300ms;
+}
+.nav-link:hover::after{
+    opacity: 0.8;
+    border-bottom: 3px solid #ff8c94;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+.nav-link:hover:visited{
+    opacity: 0.8;
+    border-bottom: 3px solid #ff8c94;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#banner{
+    background-image: url('../images/pexels-guillaume-pierre-leroy-11417443.jpg');
+    background-size:contain;
+    background-repeat:no-repeat;
+    top: 0;
+    height:800px;
+    width:100%;
+}
+@media screen and (max-width:576px) {
+    .borhom{
+        margin-top: -500px !important;
+    }
+}
+@media screen and (max-width:750px) {
+    .borhom{
+        margin-top: -300px;
+    }
+}
+@media screen and (max-width:860px) {
+    .borhom{
+        margin-top: -300px;
+    }
+}
+
+/* <------CONTENT-----> */
+.about_us{
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fffbf7;
+    justify-content: center;
+    align-items: center;
+}
+.st{
+    color: #f8904f;
+    font-family: cursive;
+    text-decoration: wavy;
+    font-size: 14px;
+    font-weight: 100;
+    text-align: center;
+}
+.t1{
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-decoration: underline;
+}
+.card .btn{
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 25px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    position: relative;
+}
+.card .btn::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.8);
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+    transform: scale(0.1,1);
+}
+.card .btn:hover{
+    letter-spacing: 2px;
+}
+.card .btn:hover::before{
+    opacity: 1;
+    transform: scale(1,1);
+}
+.card .btn::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+.card .btn:hover::after{
+    opacity: 0;
+    transform: scale(0.1,1);
+}
+
+
+/* <--------FOOTER-------> */
+.social i{
+    color: #c6c6c6;
+}
+.social a{
+    color: #fff;
+    transition: transform .2s;
+}
+.social a:hover{
+    text-decoration: underline;
+    color: rgb(255, 255, 255, 10);
+    text-shadow: none;
+    -ms-transform: scale(1.5); /*IF*/
+    -webkit-transform: scale(1.5); /*safari*/
+    transform: scale(1.5);
+}
+.social a::after{
+    text-decoration: none;
+    color: #6e6e6e;
+    transform: scale(1.5);
+}
+.subemail input{
+    outline: none;
+}
+.subemail input:focus{
+    outline: none;
+}
+.subemail #button{
+    background-color: #6e6e6e;
+    color: #fff;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2px;
+}
+.subemail #button:focus{
+    outline: invert;
+}
+.subemail #button::after{
+    transform: translate(2px);
+}
